@@ -1,0 +1,122 @@
+{
+  "/hero-poster-1280.webp": [
+    1280,
+    720
+  ],
+  "/hero-poster.jpg": [
+    3840,
+    2160
+  ],
+  "/hero-poster-1920.webp": [
+    1920,
+    1080
+  ],
+  "/hero-poster-640.webp": [
+    640,
+    360
+  ],
+  "/images/about-portrait.jpg": [
+    1024,
+    1024
+  ],
+  "/images/about-mark.svg": [
+    400,
+    400
+  ],
+  "/images/jk-logo.png": [
+    1024,
+    1024
+  ],
+  "/images/journey/ai-summit.webp": [
+    788,
+    1400
+  ],
+  "/images/journey/academic-journey.webp": [
+    788,
+    1400
+  ],
+  "/images/journey/campus-events.webp": [
+    788,
+    1400
+  ],
+  "/images/journey/quick-pull.webp": [
+    788,
+    1400
+  ],
+  "/images/journey/flareon.webp": [
+    788,
+    1400
+  ],
+  "/images/journey/achievements.webp": [
+    788,
+    1400
+  ],
+  "/images/journey/codewars.webp": [
+    788,
+    1400
+  ],
+  "/images/journey/skillxchange.webp": [
+    788,
+    1400
+  ],
+  "/images/journey/hackindia.webp": [
+    788,
+    1400
+  ],
+  "/images/clubs/flareon.svg": [
+    400,
+    400
+  ],
+  "/images/clubs/flareon-logo.jpg": [
+    1024,
+    1024
+  ],
+  "/images/clubs/drr.svg": [
+    400,
+    400
+  ],
+  "/images/clubs/drr-logo.jpg": [
+    640,
+    640
+  ],
+  "/images/projects/roam-ai.svg": [
+    400,
+    400
+  ],
+  "/images/projects/skillxchange.jpg": [
+    784,
+    780
+  ],
+  "/images/projects/quickpull.jpg": [
+    1024,
+    926
+  ],
+  "/images/projects/neurofied.jpg": [
+    806,
+    808
+  ],
+  "/images/projects/name-ideas.svg": [
+    600,
+    600
+  ],
+  "/images/research/flood-ml.svg": [
+    400,
+    400
+  ],
+  "/images/research/alzheimers-xai.svg": [
+    400,
+    400
+  ],
+  "/images/research/brain-neuro.svg": [
+    400,
+    400
+  ],
+  "/images/experience/mandafia-logo.svg": [
+    400,
+    400
+  ],
+  "/images/light/experience/mandafia-logo.svg": [
+    400,
+    400
+  ]
+}

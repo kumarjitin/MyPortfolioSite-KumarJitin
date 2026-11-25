@@ -1,0 +1,19 @@
+# Portfolio revision 2
+
+This is an incremental revision of the first optimized source archive, not a new template. It preserves the existing routes, theme architecture, dependencies, portfolio data and media.
+
+## Changes
+- Project listing: removed Open Project, Report and PPT buttons. Image, title and Case Study label remain links. Reports, PPT and posters live in project detail routes, with genuine missing documents labeled Coming soon. The lower case-study content spans the full content width.
+- Hero: the original recovered 321 KB muted MP4 now loops automatically when visible and allowed by the browser; no 59 MB GIF is reintroduced. Pauses offscreen and in hidden tabs, honors the user's pause choice, and starts with a static poster under reduced-motion preferences unless the visitor explicitly opts in. The existing scroll-particle effect remains. Desktop hero height is reduced so important highlights appear sooner; artwork uses contain sizing.
+- Home: five compact equal-width quick-access tiles on wide screens, reflowing at smaller sizes. Owner-supplied counts are 4+ MERN projects, 100+ DSA questions, 4 published research works and 4 certifications; these are not independently verified. The experience tile uses the two clubs already in the data. Subtle CSS contour accents and hover transitions use the existing color tokens.
+- About: portrait alongside a full-width introduction, compact certification grid, editable optional photo and alt-text fields for Beyond the Screen stories in src/data.js. Existing stories are retained; missing photos and empty story text have honest Coming soon labels. To supply a story photograph, put it in public and set the entry's image to its public URL (for example, a path under /images/); rebuild. Event photos are still detected in public/images/events/<event-slug>/.
+- Club events: 9:16 portrait cards in one horizontal row; native scrolling on small screens; title remains visible, description reveals on hover/focus, and touch/reduced-motion layouts display description without hover. Existing club logos are used until authentic event-specific images are supplied. Empty event text and galleries say Coming soon.
+- Journey: 9:16 cards, compact heading and description reveal, native mobile scroll and existing desktop GSAP enhancement. No new dependencies.
+
+## Verification of this revision
+- 26 JS/JSX source files parsed with TypeScript syntax parser; no syntax or local import errors.
+- Asset checker: all 30 manifest entries and literal media references exist; 14 optional downloads are still absent.
+- Static JSX/CSS Chromium harness: 22 routes × 2 themes × 19 viewport sizes (836 checks); no detected page-level overflow, tested component-boundary overflow, missing rendered image paths or broken internal links.
+- Targeted static Chromium checks: project listing excludes deliverable and Open Project controls; QuickPull detail includes deliverables and its lower content is full width. Five FlareOn cards fit one desktop row at 1440×900; measured card ratio 0.5604 (9:16 = 0.5625), hover and keyboard focus reveal event description, mobile event rail scrolls. Journey card ratio 0.5598 (border-adjusted). Five homepage metrics rendered; introduction has no paragraph width cap.
+- Static checks use a transpilation/render harness with mocked React/Next.js APIs, not a production Next.js server; they do not validate hydration, actual GSAP pinning, video autoplay or theme switching. Browser autoplay is policy-dependent. The previous installation attempt was blocked by npm DNS/network and incomplete cache; no new production build or lint certification is claimed.
+- After extracting, run npm ci, npm run lint, npm run build, npm run start. Validate the real interactions, autoplay, both themes, touch and keyboard navigation before publishing.

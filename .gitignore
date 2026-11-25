@@ -1,0 +1,15 @@
+node_modules/
+.next/
+out/
+build/
+.DS_Store
+*.log
+.env*
+!.env.example
+node_modules/
+.env
+.env.local
+dist/
+build/
+.DS_Store
+.vscode/

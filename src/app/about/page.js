@@ -15,6 +15,66 @@ import {
 
 export const metadata = { title: "About & Journey — Kumar Jitin" };
 
+const journeySections = [
+  {
+    eyebrow: "FOUNDATION · 2000–2024",
+    title: "Where My Journey Started",
+    body: "Growing up in a defence household meant moving cities every few years, adapting fast, and learning that reliability matters more than comfort. That upbringing gave me a certain groundedness — the kind that makes it easier to stay calm under a deadline, take ownership of a problem, or lead a team through something unfamiliar. Three consecutive National Science Olympiad Silver Medals reinforced a discipline for curiosity and structured thinking that I carry into every project today.",
+    image: "/images/journey/achievements.webp",
+    imageAlt: "Achievements and foundations",
+    href: "/achievements",
+    hrefLabel: "View Achievements ↗",
+  },
+  {
+    eyebrow: "FULL-STACK DEVELOPMENT · 2024–PRESENT",
+    title: "Learning Through Building",
+    body: "My development journey accelerated through hands-on projects. Building Neurofied.ai, QuickPull, and SkillXchange across hackathons and academic builds gave me experience in the MERN stack, real-time systems, geospatial engineering, and AI integration. Each project pushed me to understand not just individual technologies but how entire systems connect — from API design to database modelling to real-time communication.",
+    image: "/images/journey/Projects.webp",
+    imageAlt: "Projects and development",
+    href: "/projects",
+    hrefLabel: "View Projects ↗",
+    flip: true,
+  },
+  {
+    eyebrow: "COMPETITIONS · 7+ HACKATHONS",
+    title: "Hackathons & Competitions",
+    body: "Competing in 7+ national hackathons — including placing among the Top 15 Finalists at HackIndia Spark 7 out of 200+ teams and clearing Round 2 of the Adobe University Hackathon — taught me how to scope ambitious problems, lead teams, and ship working products under pressure. University coding competitions like CodeWars 2025 and Tech Trek 2025 sharpened my algorithmic problem-solving in C++ and Java.",
+    image: "/images/journey/hackathons.webp",
+    imageAlt: "Hackathons and competitions",
+    href: "/hackathons",
+    hrefLabel: "View Hackathons ↗",
+  },
+  {
+    eyebrow: "RESEARCH & PUBLICATIONS",
+    title: "Research & Exploration",
+    body: "Published peer-reviewed research papers at IATMSI 2025 and ICCPCT 2026, contributed book chapters, and filed a patent for the QuickPull route-optimization system. My research spans AI in neurodegenerative disorders, flood prediction using lightweight ML models, and explainable AI for healthcare. This research background has shaped how I think about applying AI to real-world problems with interpretability and reliability.",
+    image: "/images/journey/research.webp",
+    imageAlt: "Research and publications",
+    href: "/research",
+    hrefLabel: "View Research ↗",
+    flip: true,
+  },
+  {
+    eyebrow: "LEADERSHIP · FLAREON · DRR CLUB",
+    title: "Collaboration & Leadership",
+    body: "As Vice President and Co-Founder of FlareOn — a student-led filmmaking club — I coordinated media production, guest sessions, creative competitions, and large-scale campus events. As a Core Team Member of the Disaster Risk Reduction Club, I contributed to safety awareness initiatives and student engagement. These experiences gave me practical understanding of team coordination, communication, event management, and leadership under time pressure.",
+    image: "/images/journey/clubs.webp",
+    imageAlt: "Clubs and leadership",
+    href: "/experience",
+    hrefLabel: "View Experience ↗",
+  },
+  {
+    eyebrow: "AI SUMMIT · CONFERENCES",
+    title: "Learning Beyond the Campus",
+    body: "Attending the India AI Impact Summit 2026 at Bharat Mandapam, New Delhi, exposed me to applied AI trends, industry perspectives, and the broader ecosystem of AI-driven innovation. Beyond coursework and projects, I continue engaging with developer communities — IEEE, Red Hat — and exploring open-source contributions, design, and content creation as extensions of my technical practice.",
+    image: "/images/journey/ai-summit.webp",
+    imageAlt: "AI Summit and conferences",
+    href: "/ai-summit",
+    hrefLabel: "View AI Summit ↗",
+    flip: true,
+  },
+];
+
 export default function AboutPage() {
   return (
     <PageShell>
@@ -44,11 +104,8 @@ export default function AboutPage() {
               <p style={{ textAlign: "justify" }}>
                 I&apos;ve worked on projects like Neurofied.ai, QuickPull, and SkillXchange — which have given me hands-on experience in full-stack development, APIs, databases, real-time systems, and AI integration. I&apos;ve participated in 7+ hackathons and have been involved in research, including published papers, a book chapter, and a patent in progress.
               </p>
-              <p style={{ textAlign: "justify" }}>
-                Apart from technical work, I&apos;ve taken on leadership roles — including serving as Vice President and Co-Founder of FlareOn, where I worked with multidisciplinary teams. I&apos;m currently strengthening my DSA skills in C++ and Java and exploring open-source development.
-              </p>
               <p style={{ textAlign: "justify", marginBottom: "16px" }}>
-                Overall, I&apos;d describe myself as someone who likes to build, learn, and take ownership — and I&apos;m looking forward to growing as a software developer.
+                Apart from technical work, I&apos;ve taken on leadership roles — including serving as Vice President and Co-Founder of FlareOn. I&apos;m currently strengthening my DSA skills and exploring open-source development.
               </p>
               <p style={{ fontSize: "13px", color: "var(--muted)" }}>
                 <strong>Education:</strong> {profile.education.degree} — {profile.education.institution} ({profile.education.duration}) · CGPA: {profile.education.cgpa}
@@ -92,7 +149,7 @@ export default function AboutPage() {
         </Link>
 
         <h2 className="sub-heading" id="extracurriculars">Extra-Curricular Activities</h2>
-        <div className="card-grid-2">
+        <div className="card-grid-2 card-grid-equal">
           {extracurriculars.map((item) => (
             <article className="info-card" key={item.title}>
               <h3>{item.title}</h3>
@@ -102,7 +159,7 @@ export default function AboutPage() {
         </div>
 
         <h2 className="sub-heading">Skills</h2>
-        <div className="card-grid-2">
+        <div className="card-grid-2 card-grid-equal">
           {skillGroups.map((group) => (
             <article className="info-card" key={group.category}>
               <span className="eyebrow">{group.category.toUpperCase()}</span>
@@ -144,6 +201,33 @@ export default function AboutPage() {
             </div>
           </div>
         ))}
+      </section>
+
+      <section className="page-content" id="journey" style={{ paddingTop: "16px" }}>
+        <h2 className="sub-heading" style={{ marginTop: 0 }}>My Journey</h2>
+        <div className="section-blocks">
+          {journeySections.map((section, i) => (
+            <Reveal delay={i * 40} key={section.title}>
+              <div className={`story-block${section.flip ? " story-block--flip" : ""}`}>
+                <div className="story-block__visual">
+                  <img src={section.image} alt={section.imageAlt} loading="lazy" />
+                </div>
+                <div className="story-block__body">
+                  <div>
+                    <span className="eyebrow">{section.eyebrow}</span>
+                    <h3 style={{ margin: "8px 0 10px", fontSize: "clamp(20px, 2vw, 26px)", letterSpacing: "-0.03em" }}>{section.title}</h3>
+                    <p style={{ lineHeight: 1.7, color: "var(--muted)", fontSize: "14.5px" }}>{section.body}</p>
+                    {section.href && (
+                      <div className="action-row" style={{ marginTop: "14px" }}>
+                        <Link className="button button-accent" href={section.href}>{section.hrefLabel}</Link>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
       </section>
     </PageShell>
   );

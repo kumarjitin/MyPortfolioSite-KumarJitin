@@ -27,11 +27,31 @@
     1024,
     1024
   ],
-  "/images/journey/ai-summit.webp": [
+  "/images/journey/Projects.webp": [
     788,
     1400
   ],
-  "/images/journey/academic-journey.webp": [
+  "/images/journey/research.webp": [
+    788,
+    1400
+  ],
+  "/images/journey/DSAquestions.webp": [
+    788,
+    1400
+  ],
+  "/images/journey/hackathons.webp": [
+    788,
+    1400
+  ],
+  "/images/journey/clubs.webp": [
+    788,
+    1400
+  ],
+  "/images/journey/Patent.webp": [
+    788,
+    1400
+  ],
+  "/images/journey/ai-summit.webp": [
     788,
     1400
   ],
@@ -39,27 +59,7 @@
     788,
     1400
   ],
-  "/images/journey/quick-pull.webp": [
-    788,
-    1400
-  ],
-  "/images/journey/flareon.webp": [
-    788,
-    1400
-  ],
   "/images/journey/achievements.webp": [
-    788,
-    1400
-  ],
-  "/images/journey/codewars.webp": [
-    788,
-    1400
-  ],
-  "/images/journey/skillxchange.webp": [
-    788,
-    1400
-  ],
-  "/images/journey/hackindia.webp": [
     788,
     1400
   ],
@@ -78,6 +78,26 @@
   "/images/clubs/drr-logo.jpg": [
     640,
     640
+  ],
+  "/images/clubs/FlareOn/OSL Launch Event E0 BTS/Thumbnail.png": [
+    522,
+    768
+  ],
+  "/images/clubs/FlareOn/E1 Poster Making competition/Thumbnail.png": [
+    880,
+    1472
+  ],
+  "/images/clubs/FlareOn/E2 Senkhon sir event/Thumbnail.png": [
+    530,
+    834
+  ],
+  "/images/clubs/FlareOn/E3 Traitors/Thumbnail.png": [
+    1472,
+    1556
+  ],
+  "/images/clubs/FlareOn/E4 Chetan Monga Event/Thumbnail.png": [
+    941,
+    1672
   ],
   "/images/projects/roam-ai.svg": [
     400,

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Journey from "@/components/Journey/Journey";
 import ContactLine from "@/components/Site/ContactLine";
 import TechIcon from "@/components/Site/TechIcon";
+import Reveal from "@/components/Site/Reveal";
 import { profile, skillGroups, homeHighlights as highlights, homeSocials as socials } from "@/data";
 
 
@@ -63,21 +64,23 @@ export default function HomeSections() {
 
         <div className="tech-grid-4">
           {skillGroups.map((group, i) => (
-            <article className="tech-card glass" key={group.category}>
-              <div>
-                <span className="eyebrow">0{i + 1} / {group.category.toUpperCase()}</span>
-                <h3>{group.category}</h3>
-                <p>{group.detail}</p>
-              </div>
-              <div className="tag-row">
-                {group.items.map((item) => (
-                  <span className="tag-pill tag-pill--lg" key={item}>
-                    <TechIcon name={item} />
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </article>
+            <Reveal delay={i * 55} key={group.category}>
+              <article className="tech-card glass">
+                <div>
+                  <span className="eyebrow">0{i + 1} / {group.category.toUpperCase()}</span>
+                  <h3>{group.category}</h3>
+                  <p>{group.detail}</p>
+                </div>
+                <div className="tag-row">
+                  {group.items.map((item) => (
+                    <span className="tag-pill tag-pill--lg" key={item}>
+                      <TechIcon name={item} />
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            </Reveal>
           ))}
         </div>
       </section>

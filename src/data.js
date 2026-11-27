@@ -56,21 +56,36 @@ export const projects = [
     type: "HACKATHON PROJECT · 2026",
     roleBadge: "Team Lead",
     summary:
-      "We built Neurofied.ai during a hackathon to explore how AI can make cognitive health screening more structured and accessible. I led the team end-to-end — from API design through the React dashboard.",
+      "Full-stack cognitive wellness app combining interactive activities, personal progress tracking and AI-powered assistance. Built during a hackathon.",
+    storyIntro:
+      "Neurofied was an opportunity to explore full-stack development through a product that combines interactive experiences, personal progress tracking and AI-powered assistance. The challenge was to bring multiple functionalities into one cohesive application while maintaining a smooth, accessible and responsive user experience. Rather than building a collection of disconnected features, the focus was on creating an application where users could interact with cognitive activities, review their progress and explore relevant wellness resources.",
     highlights: [
-      "Led development of an AI-powered cognitive assessment platform with an interactive dashboard for presenting insights.",
-      "Built components and integrated LLM APIs, backend services and REST APIs to support assessment workflows.",
+      "Worked with React to structure the frontend into reusable components and application pages.",
+      "Developed interactive user experiences for cognitive activities involving memory, attention and reaction time.",
+      "Worked with backend APIs to connect frontend functionality with server-side operations.",
+      "Explored MongoDB and Mongoose for managing user information and assessment-related records.",
+      "Implemented authentication workflows using JWT and backend-supported account management.",
+      "Integrated dashboard visualizations to make assessment results and progress easier to understand.",
+      "Explored AI integration through Gemini-powered assistance and reflective chat experiences.",
+      "Focused on responsive layouts, application navigation and consistency across different screen sizes.",
+    ],
+    outcomes: [
+      "Developed a full-stack application with separate React frontend and Express backend.",
+      "Integrated multiple cognitive activities covering 3 areas: memory, attention and reaction time.",
+      "Built a personal dashboard for reviewing assessment history and progress.",
+      "Combined authentication, data persistence, learning resources and AI-assisted interactions in one application.",
+      "Prepared the application for deployment using a separate frontend and backend architecture.",
     ],
     image: "/images/projects/neurofied.jpg",
-    stack: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "LLM APIs"],
-    role: "Team Lead — built frontend components and integrated LLM APIs, backend services, and REST APIs to support assessment workflows.",
-    learnings: "Full-stack architecture, LLM API integration, REST API design, and interactive insight dashboards.",
+    stack: ["React 18", "Vite", "JavaScript", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Recharts", "Gemini API"],
+    role: "Team Lead — led frontend architecture, integrated LLM APIs, connected React with Node.js/Express REST APIs, and built assessment dashboards.",
+    learnings: "Moving from understanding individual technologies to thinking about how an entire application works as a connected system — React, Node.js, Express, MongoDB, auth, API integration and application architecture.",
     problem:
       "Cognitive health assessments are often paper-based or hard to access digitally. We wanted to make the process structured, data-driven, and easy to present.",
     result:
       "Shipped a working platform within the hackathon window — React frontend, Node.js/Express APIs, MongoDB, and LLM integration all wired together and presenting real assessment insights.",
     conclusion:
-      "Breaking the problem into clean backend services and a focused LLM workflow made the platform readable, not just functional.",
+      "Neurofied helped me understand the importance of building features that work together rather than focusing only on their individual implementation.",
     projectUrl: "https://github.com/KumarJitin",
     files: {
       report: "/documents/projects/neurofied-report.pdf",
@@ -86,17 +101,30 @@ export const projects = [
     type: "LIVE PROJECT",
     roleBadge: "Team Lead",
     summary:
-      "QuickPull matches riders based on route overlap and compatibility — not just nearest-driver. I led the backend architecture and real-time geospatial matching system.",
+      "Route-aware ride-sharing platform that matches riders based on route overlap and geospatial compatibility — not just nearest-driver proximity.",
+    storyIntro:
+      "QuickPull was one of the most challenging projects I've worked on because it pushed me beyond conventional web development into real-time systems, geospatial engineering and machine learning. The journey started with a simple observation: many vehicles travel with empty seats while people around them are heading in similar directions. We explored how technology could make those journeys more connected. Working alongside my teammates, I contributed to building a route-aware ride-sharing platform, exploring how location data, backend services and intelligent matching could work together.",
     highlights: [
-      "Development of a ride-sharing platform focused on matching users based on compatibility and geographical proximity.",
-      "Developed backend workflows and real-time communication using Node.js, Express.js and Socket.IO; integrated OSRM, H3 and Turf.js for geospatial operations.",
+      "Collaborated on researching the problem space, exploring existing mobility solutions and evaluating technical approaches.",
+      "Contributed to application development and the integration of different system components.",
+      "Explored geospatial technologies and their role in solving route compatibility challenges.",
+      "Worked through complex integration and debugging phases involving real-time communication, backend logic and machine learning components.",
+      "Participated in technical discussions evaluating trade-offs between implementation complexity, accuracy and user experience.",
+      "Helped shape the project beyond its initial software scope by exploring a future wearable-based interaction concept.",
+    ],
+    outcomes: [
+      "Developed a route-matching engine with geographical filtering and route validation.",
+      "Implemented the foundation for live driver tracking and dynamic ride discovery.",
+      "Verified 3 core route-matching scenarios — compatible routes, reverse-direction journeys and incompatible routes.",
+      "Achieved 10/10 passing reference tests for the existing ETA prediction implementation.",
+      "Presented the project at ExploriHibit 2026, Chitkara University's emerging technology exhibition.",
     ],
     image: "/images/projects/quickpull.jpg",
     imageFit: "contain",
     imageBg: "#ffffff",
-    stack: ["JavaScript", "Node.js", "Express.js", "MongoDB", "Socket.IO", "OSRM", "H3", "Turf.js"],
-    role: "Team Lead — developed backend workflows and real-time communication with Socket.IO and integrated OSRM, H3, and Turf.js.",
-    learnings: "Real-time systems, route-aware matching, geospatial indexing, and low-latency backend design.",
+    stack: ["JavaScript", "Node.js", "Express.js", "MongoDB", "Socket.IO", "Python", "FastAPI", "LightGBM", "H3", "Turf.js", "OSRM", "Leaflet"],
+    role: "Team Lead — developed backend workflows, real-time communication with Socket.IO, and integrated OSRM, H3, and Turf.js for geospatial operations.",
+    learnings: "Backend architecture, API integration, real-time communication, geospatial problem-solving and collaborative software development. Building a complex product isn't just about writing code — it involves researching unfamiliar technologies and making decisions when implementation doesn't behave as expected.",
     problem:
       "Most ride-sharing apps match the nearest driver, ignoring whether two people are actually heading the same way. QuickPull was built to fix that.",
     result:
@@ -118,15 +146,29 @@ export const projects = [
     type: "ACADEMIC / LIVE PROJECT",
     roleBadge: "Team Lead",
     summary:
-      "Peer-to-peer platform connecting users for skill exchange through skill-matching features and live video sessions.",
+      "Peer-to-peer learning platform where people exchange knowledge, discover learning partners and grow through collaborative sessions — built as team lead.",
+    storyIntro:
+      "SkillXchange was an important milestone in my development journey, not just because of the application we built, but because it gave me an opportunity to experience software development from a team leadership perspective. The idea was to create a peer-to-peer learning environment where people could exchange knowledge, discover learning partners and grow through collaborative sessions. As the Team Lead, I was responsible for coordinating the team's progress, distributing responsibilities and ensuring that different parts of the project came together towards a common goal.",
     highlights: [
-      "Led development of a peer-to-peer platform connecting users for skill exchange through skill-matching features.",
-      "Developed backend using Node.js, Express.js and MongoDB, and Jitsi Meet API for real-time video communication.",
+      "Led a team of 4 members, coordinating responsibilities and dividing project tasks according to individual contributions.",
+      "Researched existing learning platforms and explored how mutual skill exchange could provide a more engaging learning experience.",
+      "Participated in planning the application structure, feature priorities and development workflow.",
+      "Contributed to frontend development, application functionality and integration of key features.",
+      "Coordinated discussions around implementation challenges, tracked progress and helped resolve blockers.",
+      "Worked on connecting skill discovery, session creation and video interaction into a unified user experience.",
+      "Helped manage changing requirements and make practical implementation decisions within project timelines.",
+    ],
+    outcomes: [
+      "Successfully led a 4-member development team.",
+      "Recorded 8 users during project testing, including 6 real users and 2 test accounts.",
+      "Facilitated testing involving 4 created sessions and 8 session joins.",
+      "Supported the exchange of 6 different skills during the testing phase.",
+      "Conducted manual functional, UI, compatibility and edge-case testing.",
     ],
     image: "/images/projects/skillxchange.jpg",
-    stack: ["JavaScript", "Node.js", "Express.js", "MongoDB", "Jitsi Meet API"],
-    role: "Team Lead — led platform development, built the Node.js/Express/MongoDB backend, and integrated Jitsi Meet API.",
-    learnings: "Backend architecture, skill-matching logic, authentication, and real-time video API integration.",
+    stack: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "MongoDB Atlas", "Jitsi Meet API"],
+    role: "Team Lead — led platform development, built the Node.js/Express/MongoDB backend, and integrated Jitsi Meet API for live video.",
+    learnings: "Being a team lead involves understanding everyone's strengths, communicating expectations, monitoring progress, contributing technically and taking responsibility. Task prioritization, debugging, integration and making realistic technical decisions under time constraints.",
     problem:
       "There was no easy way for students to find peers with complementary skills and actually connect for a real exchange — so we built one.",
     result:
@@ -143,26 +185,28 @@ export const projects = [
   {
     slug: "name-ideas",
     number: "04",
-    name: "Name Ideas",
-    subtitle: "Curated Project & Product Name Concepts",
-    type: "CREATIVE EXPLORATION",
+    name: "More Ideas",
+    subtitle: "Proposed Concepts & Future Explorations",
+    type: "CONCEPTS · COMING SOON",
     roleBadge: "Creator",
     summary:
-      "A growing collection of thoughtful name ideas I\'ve brainstormed for projects, products, and startups — each with a visual and the thinking behind it.",
+      "Proposed technical concepts and project ideas I am exploring — featuring KrishiWave, with more ideas coming soon.",
     highlights: [
-      "Brainstormed and curated name concepts across different domains — tech, health, education, travel, and more.",
-      "Each idea paired with a visual and a brief rationale explaining the naming direction.",
+      "KrishiWave — AI-Driven Smart Agriculture Concept combining RF signal sensing and federated learning.",
+      "More concepts and technical proposals coming soon.",
     ],
-    image: "/images/projects/name-ideas.svg",
-    stack: ["Branding", "Ideation", "Visual Design"],
-    role: "Creator — brainstormed, curated, and documented naming concepts across product and project domains.",
-    learnings: "Naming strategy, creative ideation, brand thinking, and visual communication.",
+    image: "/images/projects/krishiwave.jpg",
+    imageFit: "contain",
+    imageBg: "#ffffff",
+    stack: ["AI/ML", "RF Signal Sensing", "Federated Learning"],
+    role: "Creator — researching, architecting, and documenting proposed technical concepts.",
+    learnings: "Exploring intersections of full-stack systems, machine learning, wireless communication, and privacy-focused architecture.",
     problem:
-      "Good names are hard. They need to be memorable, meaningful, and available — so I started collecting the ones that stuck.",
+      "Turning early observations and research questions into structured, technically grounded project proposals.",
     result:
-      "Built a personal library of name ideas, each documented with its inspiration and a visual — some already used in real projects.",
+      "Documented KrishiWave with a full technical proposal and modular architecture; additional ideas coming soon.",
     conclusion:
-      "Thinking about names early forces you to clarify what a product actually stands for — it\'s a design exercise in disguise.",
+      "Every full-scale system begins as a carefully questioned concept.",
     projectUrl: null,
     files: {
       report: "/documents/projects/name-ideas-report.pdf",
@@ -204,61 +248,293 @@ export const clubs = [
     imageBg: "#ffffff",
     events: [
       {
-        slug: "flareon-orientation",
-        title: "FlareOn Club Orientation",
-        tag: "CREATIVE INDUCTION",
-        cover: "/images/clubs/flareon-logo.jpg",
-        imageFit: "contain",
-        imageBg: "#ffffff",
+        slug: "osl-launch-e0",
+        title: "FlareOn at the Office of Student Life Main Event",
+        tag: "E0 · OSL MAIN EVENT",
+        status: "Completed",
+        upcoming: false,
+        cover: "/images/clubs/FlareOn/OSL Launch Event E0 BTS/Thumbnail.png",
+        galleryFolder: "images/clubs/FlareOn/OSL Launch Event E0 BTS",
         about:
-          "Introduced incoming students to FlareOn's vision across filmmaking, photography, design, and campus storytelling, onboarding new members into creative production teams.",
+          "Led behind-the-scenes media coverage, canopy decoration until 4 AM, and front-stage documentation for FlareOn at the university-level OSL main event.",
+        details: {
+          subtitle: "FlareOn | Under the Office of Student Life",
+          meta: [
+            { label: "Category", value: "University-level event support, media production & student engagement" },
+            { label: "Format", value: "Event coverage, backstage coordination, canopy activities & content creation" },
+          ],
+          overview: [
+            "The Office of Student Life main event was a major opportunity for FlareOn to represent its work, engage with the student community, and contribute to the wider university experience.",
+            "For me, the experience was especially meaningful as Vice President of FlareOn, working across media production, setup, and operational execution.",
+          ],
+          sections: [
+            {
+              title: "My Role & Responsibilities",
+              groups: [
+                {
+                  heading: "Media coverage and documentation",
+                  items: [
+                    "Supporting behind-the-scenes photography and videography.",
+                    "Capturing event preparations, performances, and important moments.",
+                    "Supporting visual storytelling and content documenting the experience beyond the main stage.",
+                  ],
+                },
+                {
+                  heading: "Canopy preparation and activities",
+                  items: [
+                    "Contributing to the preparation and decoration of the FlareOn canopy.",
+                    "Supporting interactive activities designed to engage students.",
+                    "Coordinating with teammates responsible for different parts of the setup.",
+                  ],
+                },
+                {
+                  heading: "Team coordination",
+                  items: [
+                    "Working with students, volunteers, and faculty during preparation and execution.",
+                    "Addressing unexpected requirements and taking ownership across tasks when needed.",
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Behind the Scenes",
+              paragraphs: [
+                "We attended classes during the day, worked on behind-the-scenes coverage from approximately 5 PM until midnight, and continued decorating the canopy until around 4 AM with only two to three hours of sleep.",
+                "Despite last-minute changes and tight timelines, the team worked together to prepare the canopy, document the event, and deliver the required content.",
+              ],
+            },
+            {
+              title: "Memorable Moments",
+              items: [
+                "Being trusted to record the event from the restricted front-stage area, capturing performances and the Chancellor's reactions.",
+                "Dr. Madhu Gupta visiting the FlareOn canopy and interacting with activities created by the team.",
+              ],
+            },
+          ],
+          team: "Sameer Saini, Tanisha Garg, Drishti Pathak, Dhanu Shree, Rahul Lal, Prachi Chhabra, Peeru Choudhary, Riya Patial, and volunteers; guided by Anand A. Jha, Dr. Manav Bansal, Vrinda Sharma, Aameen Khanna, Tushar, and Pushp Taneja.",
+          learnings: [
+            "Managing responsibilities alongside academic commitments.",
+            "Planning and executing content coverage under time pressure.",
+            "Telling a story through photography and videography.",
+            "Coordinating a team working across different responsibilities and adapting when plans change.",
+          ],
+          takeaway: "The final event is what people remember, but the preparation is what teaches you how to create it.",
+        },
       },
       {
-        slug: "flareon-guess-create-win",
-        title: "Guess, Create & Win",
-        tag: "INTERACTIVE SHOWCASE",
-        cover: "/images/clubs/flareon-logo.jpg",
-        imageFit: "contain",
-        imageBg: "#ffffff",
+        slug: "poster-making-e1",
+        title: "FlareOn Online Poster-Making Competition",
+        tag: "E1 · DESIGN COMPETITION",
+        status: "Completed",
+        upcoming: false,
+        cover: "/images/clubs/FlareOn/E1 Poster Making competition/Thumbnail.png",
+        galleryFolder: "images/clubs/FlareOn/E1 Poster Making competition",
         about:
-          "Organized an interactive campus engagement stall and creative challenge combining visual trivia, rapid ideation, and collaborative media activities.",
+          "Organised a fast-turnaround digital poster-making competition alongside the OSL main event, crossing 40+ registrations and judging the Top 10+1 entries.",
+        details: {
+          subtitle: "FlareOn | Under the Office of Student Life",
+          meta: [
+            { label: "Category", value: "Online creative competition" },
+            { label: "Format", value: "Digital poster-making competition" },
+            { label: "Registration", value: "40+ registrations target crossed" },
+            { label: "Timeline", value: "Event on the 17th; submissions closed on the 18th" },
+          ],
+          overview: [
+            "The FlareOn Online Poster-Making Competition encouraged students to explore visual communication, creative thinking, and digital design.",
+            "Conducted alongside the team's responsibilities for the Office of Student Life main event, it required independent planning, promotion, participant coordination, and judging under a short timeline.",
+          ],
+          sections: [
+            {
+              title: "Contribution & Execution",
+              items: [
+                "Planning the competition themes and structure.",
+                "Coordinating registrations, outreach, and promotional activities.",
+                "Coordinating prize-related arrangements and working with the core team on judging.",
+                "Supporting the selection and recognition of the Top 10+1 winners.",
+              ],
+            },
+            {
+              title: "Judging & Challenges",
+              paragraphs: [
+                "The biggest constraint was the short timeline while simultaneously supporting the OSL main event.",
+                "Selecting the Top 10+1 required careful discussions around quality, creativity, and fairness because many participants submitted deserving work.",
+              ],
+            },
+          ],
+          team: "Sameer Saini, Tanisha Garg, Drishti Pathak, Peeru Choudhary, Rahul Lal, Dhanu Shree, Prachi Chhabra, Nitish Kumar, Simran Kaur, and Riya Patial; guided by Dr. Manav Bansal, Aameen Khanna, Vrinda Sharma, Tushar, and Pushp Taneja.",
+          learnings: [
+            "Planning a short-duration online competition and coordinating promotion under time constraints.",
+            "Approaching creative judging with fairness and consistency.",
+            "Balancing multiple concurrent projects and deadlines.",
+          ],
+          takeaway: "Creativity deserves not only a platform, but also a fair process that recognises the effort behind every submission.",
+          tagline: "Building Creativity for Visibility, one poster at a time.",
+        },
       },
       {
-        slug: "flareon-film-workshop",
-        title: "Filmmaking & Editing Workshop",
-        tag: "PRODUCTION WORKSHOP",
-        cover: "/images/clubs/flareon-logo.jpg",
-        imageFit: "contain",
-        imageBg: "#ffffff",
+        slug: "senkhon-sir-event-e2",
+        title: "The Art of Mastery",
+        tag: "E2 · GUEST SESSION",
+        status: "Completed",
+        upcoming: false,
+        cover: "/images/clubs/FlareOn/E2 Senkhon sir event/Thumbnail.png",
+        galleryFolder: "images/clubs/FlareOn/E2 Senkhon sir event",
         about:
-          "Coordinated a hands-on workshop covering framing, camera movement, visual pacing, and post-production editing workflows for student creators.",
+          "Inspirational guest session with Mr. Harinder Singh Sekhon at Chenab Hall (52 attendees), blending poetry, discipline, fitness insights, and student Q&A.",
+        details: {
+          subtitle: "FlareOn | Under the Office of Student Life",
+          meta: [
+            { label: "Guest", value: "Mr. Harinder Singh Sekhon" },
+            { label: "Date & Time", value: "1 August 2026 · 11:00 AM – 1:00 PM" },
+            { label: "Venue", value: "Chenab Hall, Chitkara University" },
+            { label: "Attendees", value: "52 reported attendees" },
+            { label: "SDG Alignment", value: "SDG 3, SDG 4, SDG 11" },
+          ],
+          overview: [
+            "The Art of Mastery was an inspirational guest session organised by FlareOn to introduce students to discipline, perseverance, fitness, resilience, and personal growth.",
+            "Featuring Mr. Harinder Singh Sekhon, whose achievements span public service and competitive bodybuilding, the session gave students practical inspiration through real-life stories and direct Q&A.",
+          ],
+          sections: [
+            {
+              title: "Programme Flow",
+              items: [
+                "Opening poetry performance by Anshu Sharma.",
+                "Introductory segment and guest welcome.",
+                "Motivational session by Mr. Harinder Singh Sekhon.",
+                "Interactive question-and-answer session with students.",
+                "Guest felicitation by faculty members and concluding group photograph.",
+              ],
+            },
+            {
+              title: "Contribution & Execution",
+              paragraphs: [
+                "Contributed to broader planning and execution across programme sequencing, guest interaction, stage activities, media, and operational coordination alongside the FlareOn core team and volunteers.",
+              ],
+            },
+          ],
+          team: "Sameer Saini, Tanisha Garg, Drishti Pathak, Dhanu Shree, Prachi Chhabra, Peeru Choudhary, Nitish Kumar, Rahul Lal, Anvi Mangla, Nitish Mehta, Dhruv Pathak, Anshu Sharma, NSS, and NCC; guided by Anand Jha, Colonel Ravi, Anil Kumar, Vrinda Sharma, Pushp Taneja, and Dr. Manav Bansal.",
+          learnings: [
+            "Structuring a speaker-led programme around a central message.",
+            "Sequencing performances and interactive segments to boost audience engagement.",
+            "Coordinating stage, media, and operational teams seamlessly.",
+          ],
+          takeaway: "A successful guest session is not measured only by attendance. It is measured by the quality of the experience and the ideas students take away.",
+        },
       },
       {
-        slug: "flareon-campus-fest-coverage",
-        title: "Campus Fest Media Coverage",
-        tag: "MEDIA & OPERATIONS",
-        cover: "/images/clubs/flareon-logo.jpg",
-        imageFit: "contain",
-        imageBg: "#ffffff",
+        slug: "traitors-e3",
+        title: "The Traitors",
+        tag: "E3 · FLAREON × CREOAWAVE",
+        status: "Completed",
+        upcoming: false,
+        cover: "/images/clubs/FlareOn/E3 Traitors/Thumbnail.png",
+        galleryFolder: "images/clubs/FlareOn/E3 Traitors",
         about:
-          "Led multi-team photography, videography, and real-time social media editing crews across flagship campus events and auditorium sessions.",
+          "Joint FlareOn × CreoAwave social-deduction & filmmaking competition at Shivalik Hall with 170 registrations, 87 attendees, secret missions, and elimination rounds.",
+        details: {
+          subtitle: "FlareOn × CreoAwave",
+          meta: [
+            { label: "Category", value: "Interactive competition, content creation & collaboration" },
+            { label: "Date & Time", value: "22 August 2026 · 11:00 AM – 1:15 PM" },
+            { label: "Venue", value: "Shivalik Hall, Chitkara University" },
+            { label: "Scale", value: "170 registrations · 87 reported attendees" },
+            { label: "SDG Alignment", value: "SDG 4, SDG 11" },
+          ],
+          overview: [
+            "The Traitors was an interactive student event jointly organised by FlareOn and CreoAwave, combining strategy, storytelling, filmmaking, communication, and social deduction.",
+            "Participants were divided into Innocents and Traitors, competing in creative ad/reel challenges, secret missions, hidden shield hunts, and the Circle of Shaq elimination rounds.",
+          ],
+          sections: [
+            {
+              title: "Activities & Recognitions",
+              items: [
+                "Creative short-form advertisement and reel challenges using assigned elements.",
+                "Secret tasks, hidden shields, and strategic voting in The Circle of Shaq.",
+                "Special recognitions: Master of Deception, One of the Most Influential Personalities in the Room, and The Hidden Ace.",
+              ],
+            },
+            {
+              title: "Execution & Collaboration",
+              paragraphs: [
+                "Supported planning, anchoring, posters, technical coordination, media, decorations, discipline, and participant engagement across both clubs.",
+                "Balanced structured gameplay rules with spontaneous moments, adapting smoothly through last-minute changes.",
+              ],
+            },
+          ],
+          team: "FlareOn (Sameer Saini, Tanisha Garg, Drishti Pathak, Anvi Mangla, Prachi Chhabra, Nitish Mehta, Nitish Kumar, Dhruv, Rahul Lal, Manish Kumar, Dhanu Shree, Peeru Choudhary) & CreoAwave (Sunanya Sharma, Shreyansh Sharma, Sujal, Kanhaiya, Vanshika, Shaun, Simon); appreciated by Ms. Vrinda Sharma.",
+          learnings: [
+            "Coordinating a collaborative event across two student clubs.",
+            "Balancing structure with spontaneity and clear activity transitions.",
+            "Trusting teammates with responsibilities so everyone contributes their strengths.",
+          ],
+          takeaway: "A strong event is built not just through planning, but through collaboration, creative freedom, and the ability to adapt.",
+        },
       },
       {
-        slug: "flareon-short-film-screening",
-        title: "Short Film & Reel Showcase",
-        tag: "CAMPUS SCREENING",
-        cover: "/images/clubs/flareon-logo.jpg",
-        imageFit: "contain",
-        imageBg: "#ffffff",
+        slug: "chetan-monga-e4",
+        title: "Comedy Beyond The Script ft. Chetan Monga",
+        tag: "E4 · CREATOR SESSION",
+        status: "Completed",
+        upcoming: false,
+        cover: "/images/clubs/FlareOn/E4 Chetan Monga Event/Thumbnail.png",
+        galleryFolder: "images/clubs/FlareOn/E4 Chetan Monga Event",
         about:
-          "Managed end-to-end event logistics, curation, and stage showcase for student-directed short films and digital storytelling reels.",
+          "Large-scale live creator session with Chetan Monga drawing 600+ registrations in 3 days and 350+ students attended — managing guest coordination, backstage flow, bus logistics, and multi-team operations under shifting schedules.",
+        details: {
+          subtitle: "FlareOn | Under the Office of Student Life",
+          meta: [
+            { label: "Category", value: "Guest session, entertainment & content creation" },
+            { label: "Guest", value: "Chetan Monga" },
+            { label: "Format", value: "Live creator session, performances & audience Q&A" },
+            { label: "Scale", value: "600+ registrations in 3 days · 350+ students attended" },
+          ],
+          overview: [
+            "Comedy Beyond The Script was organised by FlareOn to explore content creation, storytelling, and audience engagement through the experiences of creator Chetan Monga.",
+            "The programme featured a musical performance by Krishna, FlareOn and CHERE videos, a dance performance by Ankush, an interactive session and Q&A with Chetan Monga, and a closing felicitation.",
+          ],
+          sections: [
+            {
+              title: "My Role & Responsibilities",
+              groups: [
+                {
+                  heading: "Guest & backstage coordination",
+                  items: [
+                    "Coordinating guest arrival, entry, and movement to keep the guest experience organised.",
+                    "Supporting backstage arrangements and transitions between programme segments.",
+                  ],
+                },
+                {
+                  heading: "Logistics, media & technical operations",
+                  items: [
+                    "Coordinating bus routes, stops, gift arrangements, and operational follow-ups across blocks.",
+                    "Reviewing edits from media teams and following up on technical deliverables.",
+                  ],
+                },
+              ],
+            },
+            {
+              title: "Behind the Execution",
+              paragraphs: [
+                "Preparation involved postponed dates, schedule changes, transport coordination, and venue issues — requiring constant problem-solving across guest-management, administration, technical, and organising teams.",
+                "Despite uncertainty, the team adapted continuously and delivered the event at a large scale.",
+              ],
+            },
+          ],
+          team: "Sameer Saini, Drishti Pathak, Tanisha Garg, Peeru Choudhary, Anvi Mangla, Nitish Kumar, Shivam, Gagan, Dhanu Shree, Nitish Mehta, Rahul Lal, Muskan, Palak, Piyush, Aditi, Simran, Dhruv, and Prachi Chhabra; guided by Anil Sir, Ravi Sharma Sir, Harsh Shrivastavaa, Pushp Taneja, Vrinda Sharma, Aameen Khanna, Dr. Manav Bansal, Anand A. Jha, and Tushar.",
+          learnings: [
+            "Patience under pressure and problem-solving without complete information.",
+            "Clear communication and prioritisation across multiple teams.",
+            "Taking ownership beyond a narrow job description when situations change.",
+          ],
+          takeaway: "The real test of event management is not when everything goes according to plan. It is how you respond when it does not.",
+        },
       },
     ],
   },
   {
     id: "drr",
     role: "Core Team Member",
-    organization: "Disaster Risk Reduction Club",
+    organization: "Disaster Risk Reduction (DRR) Club",
     duration: "August 2026 – Present",
     detail:
       "Coordinated college-level initiatives and events, collaborating with senior faculty, college officials and student teams.",
@@ -267,58 +543,136 @@ export const clubs = [
     imageBg: "#ffffff",
     events: [
       {
-        slug: "drr-awareness-drive",
-        title: "Campus Disaster Awareness Drive",
-        tag: "PREPARE · PROTECT · RESPOND",
-        cover: "/images/clubs/drr-logo.jpg",
-        imageFit: "contain",
-        imageBg: "#ffffff",
+        slug: "drr-orientation-e0",
+        title: "DRR Freshers' Orientation: A New Beginning",
+        tag: "E0 · ORIENTATION",
+        status: "Completed",
+        upcoming: false,
+        cover: "/images/clubs/DRR/E0 Launch/1789915075756.jpg",
+        galleryFolder: "images/clubs/DRR/E0 Launch",
         about:
-          "Coordinated an awareness campaign focused on everyday preparedness, safety protocols, and SDG 11 resilient campus communities.",
+          "Introduced incoming freshers to the DRR Club's mission of preparedness, prevention, and safety — taking ownership of orientation execution as a new core member.",
+        details: {
+          subtitle: "Disaster Risk Reduction (DRR) Club | Chitkara University",
+          meta: [
+            { label: "Category", value: "Club orientation and student engagement" },
+            { label: "Format", value: "Freshers' orientation" },
+          ],
+          overview: [
+            "The DRR Freshers' Orientation introduced the Disaster Risk Reduction Club's purpose to incoming students and highlighted the importance of awareness, preparedness, prevention, and safety.",
+            "Designed to familiarise freshers with the club's objectives, it encouraged students to join a community focused on disaster risk reduction.",
+          ],
+          sections: [
+            {
+              title: "My Contribution & Execution",
+              paragraphs: [
+                "Having recently joined the DRR Core Team, I took ownership of the responsibilities assigned to me and contributed to the event's preparation and execution.",
+                "It was one of my first opportunities to experience student-club operations from the inside — learning through execution, coordinating with teammates, and delivering on shared plans.",
+              ],
+            },
+          ],
+          team: "Tarun, Sameer Saini, Sneha, Ishika Aggarwal, Anamika, Yuvraj Gotra, and Vansh; guided by Ravi Sharma and Prof. (Dr.) Ashok Kumar Thakur.",
+          learnings: [
+            "Taking responsibility even when new to a team.",
+            "Understanding the objective before executing a task and coordinating with teammates.",
+            "Why initiative and willingness to learn matter in leadership.",
+          ],
+          takeaway: "You do not need to know everything before taking responsibility. You need the willingness to learn and deliver.",
+        },
       },
       {
-        slug: "drr-safety-workshop",
-        title: "Emergency Response Workshop",
-        tag: "SAFETY TRAINING",
-        cover: "/images/clubs/drr-logo.jpg",
-        imageFit: "contain",
-        imageBg: "#ffffff",
+        slug: "drr-survival-iq-e1",
+        title: "SURVIVAL IQ: How Prepared Are You?",
+        tag: "E1 · ONLINE QUIZ",
+        status: "Completed",
+        upcoming: false,
+        cover: "/images/clubs/DRR/E1 Quiz/Thumbnail.jpeg",
+        galleryFolder: "images/clubs/DRR/E1 Quiz",
         about:
-          "Collaborated with faculty and safety leads to organize practical response briefings and first-aid coordination sessions for students.",
-      },
-      {
-        slug: "drr-mock-drill",
-        title: "Campus Mock Drill & Evacuation",
-        tag: "FIELD COORDINATION",
-        cover: "/images/clubs/drr-logo.jpg",
-        imageFit: "contain",
-        imageBg: "#ffffff",
-        about:
-          "Assisted senior officials and volunteer teams in planning and coordinating structured campus evacuation and safety readiness drills.",
-      },
-      {
-        slug: "drr-sustainable-cities",
-        title: "Sustainable Communities Seminar",
-        tag: "SDG 11 INITIATIVE",
-        cover: "/images/clubs/drr-logo.jpg",
-        imageFit: "contain",
-        imageBg: "#ffffff",
-        about:
-          "Helped organize faculty-student seminar discussions around urban resilience, climate preparedness, and sustainable community design.",
-      },
-      {
-        slug: "drr-community-outreach",
-        title: "DRR Community Outreach",
-        tag: "SOCIAL IMPACT",
-        cover: "/images/clubs/drr-logo.jpg",
-        imageFit: "contain",
-        imageBg: "#ffffff",
-        about:
-          "Coordinated outreach activities connecting student volunteers with community resilience and risk-reduction awareness programs.",
+          "Interactive Google Forms awareness quiz on disaster preparedness & safety protocols — contributed from conceptualisation and poster design to award presentation.",
+        details: {
+          subtitle: "Disaster Risk Reduction (DRR) Club | Chitkara University",
+          meta: [
+            { label: "Category", value: "Awareness, education and student engagement" },
+            { label: "Format", value: "Online quiz · Google Forms" },
+          ],
+          overview: [
+            "SURVIVAL IQ: How Prepared Are You? was an initiative by the DRR Club to promote disaster preparedness, risk awareness, emergency response, and essential safety protocols among students.",
+            "Using an interactive quiz format, it made safety concepts accessible and encouraged students to recognise the importance of informed action during emergencies.",
+          ],
+          sections: [
+            {
+              title: "My Contribution",
+              items: [
+                "Contributing to the conceptualisation of the quiz.",
+                "Developing the quiz structure and form using Google Forms.",
+                "Designing the promotional poster and sharing the initiative among students.",
+                "Coordinating with the team and taking part in the award presentation alongside faculty members.",
+              ],
+            },
+            {
+              title: "Results & Recognition",
+              items: [
+                "Winners recognised: Saivansha Vashist, Manya Behl, and Kiratnoor Kaur.",
+                "Presented awards in recognition of their knowledge, participation, and commitment to disaster preparedness.",
+              ],
+            },
+          ],
+          team: "Tarun, Sameer Saini, Sneha, Ishika Aggarwal, Anchal Guleria, Anamika Srivastava, Vansh Goyal, Yuvraj, Rahul Lal, and Peeru Choudhary; faculty guidance from Ravi Sharma, Dr. Abhishek, Prof. (Dr.) Ashok Kumar Thakur, Dr. Preetpal, Dr. Akriti, Ms. Poluru, Dr. Ruhani, Er. Parth, Mr. Naveen, Mr. Vikas, and Mr. Ravi.",
+          learnings: [
+            "Converting an idea into a structured digital activity and designing promotional material around a clear objective.",
+            "Communicating educational information in a simple, engaging way.",
+            "Coordinating with different people while keeping the initiative on track.",
+          ],
+          takeaway: "Effective awareness begins with clear communication and meaningful participation.",
+          tagline: "Think Smart. Act Fast. Stay Prepared.",
+        },
       },
     ],
   },
 ];
+
+export const portfolioLearning = {
+  title: "Portfolio-wide Learning: What These Events Taught Me",
+  intro:
+    "Working across DRR initiatives, FlareOn events, and the FlareOn × CreoAwave collaboration gave me experience in educational initiatives, guest sessions, creative competitions, and large-scale interactive events.",
+  skills: [
+    {
+      title: "Event Planning & Execution",
+      detail: "Taking an idea from initial concept through planning, preparation, coordination, and final execution.",
+    },
+    {
+      title: "Leadership & Ownership",
+      detail: "Taking responsibility, supporting people, making decisions, and staying accountable when situations become difficult.",
+    },
+    {
+      title: "Team Management & Collaboration",
+      detail: "Understanding different working styles and creating space for people to contribute their strengths.",
+    },
+    {
+      title: "Communication & Stakeholder Coordination",
+      detail: "Communicating clearly with faculty members, student teams, guests, volunteers, and technical coordinators.",
+    },
+    {
+      title: "Problem-Solving Under Pressure",
+      detail: "Focusing on practical solutions during last-minute changes, delays, and logistical issues.",
+    },
+    {
+      title: "Media & Creative Production",
+      detail: "Developing visual storytelling skills through content coverage, poster design, video reviews, and documentation.",
+    },
+    {
+      title: "Time & Resource Management",
+      detail: "Balancing academic responsibilities with event preparation under limited time and resources.",
+    },
+    {
+      title: "Adaptability & Resilience",
+      detail: "Responding quickly when plans change so the team keeps moving toward a shared outcome.",
+    },
+  ],
+  closing:
+    "The most valuable outcome was not just what we organised. It was what we learned while bringing it to life.",
+};
 
 export const allClubEvents = clubs.flatMap((club) =>
   club.events.map((ev) => ({
@@ -553,67 +907,45 @@ export const personalStoryParagraphs = [
 
 export const nameIdeas = [
   {
-    name: "Neurofied",
-    tagline: "Where cognition meets code.",
-    domain: "Health × AI",
-    image: "/images/projects/neurofied.jpg",
-    note: "Coined for our cognitive health platform — 'Neuro' for the brain, 'fied' as in amplified or codified. Short, punchy, and immediately signals AI + neuroscience.",
-  },
-  {
-    name: "QuickPull",
-    tagline: "Rides that think ahead.",
-    domain: "Mobility × Geospatial",
-    image: "/images/projects/quickpull.jpg",
+    name: "KrishiWave",
+    tagline: "AI-Driven Smart Agriculture Concept",
+    domain: "PROPOSED PROJECT · AI/ML · RF SIGNAL SENSING · FEDERATED LEARNING",
+    image: "/images/projects/krishiwave.jpg",
     imageFit: "contain",
     imageBg: "#ffffff",
-    note: "Named for the idea of quickly pulling riders into a matched route — fast, action-oriented, and easy to remember. The 'pull' suggests magnetic matching.",
-  },
-  {
-    name: "SkillXchange",
-    tagline: "Learn what you need. Teach what you know.",
-    domain: "Education × P2P",
-    image: "/images/projects/skillxchange.jpg",
-    note: "The 'X' replaces 'exchange' visually while keeping the meaning clear — peer-to-peer skill sharing where everyone is both a learner and a teacher.",
-  },
-  {
-    name: "FlareOn",
-    tagline: "Ignite your creative spark.",
-    domain: "Media × Community",
-    image: "/images/clubs/flareon-logo.jpg",
-    imageFit: "contain",
-    imageBg: "#ffffff",
-    note: "A flare that stays on — continuous creative energy. Perfect for a filmmaking and media club that keeps producing content around campus.",
-  },
-  {
-    name: "Roam.ai",
-    tagline: "Let AI plan the journey.",
-    domain: "Travel × AI",
-    image: "/images/projects/roam-ai.svg",
-    note: "Roaming + AI — the name instantly communicates travel and intelligence. The '.ai' domain suffix doubles as a feature description.",
-  },
-  {
-    name: "CodePulse",
-    tagline: "Feel the rhythm of your code.",
-    domain: "DevTools",
-    image: "/images/projects/name-ideas.svg",
-    note: "A concept for a developer productivity tool — 'pulse' suggests real-time feedback and a living, breathing development environment.",
+    overview: [
+      "KrishiWave is a proposed smart agriculture platform that explores how wireless radio-frequency (RF) signals and artificial intelligence could help farmers monitor soil moisture, identify crop stress, and receive early disease-risk alerts.",
+      "The central idea is to use changes in wireless signal behaviour—such as signal strength, attenuation, and propagation patterns—as indirect indicators of agricultural conditions. The concept combines this approach with federated learning, allowing multiple farms to contribute to shared model improvement without sharing their raw farm data.",
+    ],
+    approach: [
+      "Identified challenges in existing precision-agriculture solutions, particularly affordability, connectivity, sensor maintenance, and farm-data privacy.",
+      "Researched how RF propagation changes when signals interact with soil and vegetation.",
+      "Explored how machine learning models could interpret signal patterns to estimate soil moisture, crop stress, and disease risk.",
+      "Proposed a federated learning architecture to support collaborative AI training while keeping individual farm data local.",
+      "Outlined a modular system architecture connecting RF data simulation, AI inference, privacy-preserving model training, and a farmer-facing dashboard.",
+      "Investigated a future hardware roadmap involving LoRa nodes, ESP32 gateways, software-defined radio, and antenna systems.",
+    ],
+    learning:
+      "This concept helped me explore the intersection of full-stack development, machine learning, wireless communication, and privacy-focused system design. It also highlighted an important engineering challenge: validating simulated RF predictions against real agricultural field measurements before making practical deployment claims.",
+    status:
+      "Concept and technical proposal. The proposed software and hardware architecture require implementation and real-world validation.",
   },
 ];
 
 export const journeyStories = [
-  ["01", "Projects", "Neurofied.ai, QuickPull, SkillXchange & Roam.ai built across hackathons and live deployments.", "PROJECTS", "/images/projects/neurofied.jpg", "/projects"],
-  ["02", "Research", "Published machine learning papers, book chapters, and ongoing Alzheimer's research.", "PUBLICATIONS", "/images/research/brain-neuro.svg", "/research"],
-  ["03", "Competitions", "Adobe University Hackathon Round 2 Qualifier, CodeWars 6.0 & Olympiad medals.", "DSA & COMPETITIONS", "/images/journey/codewars.webp", "/experience#achievements"],
-  ["04", "Hackathons", "7+ national hackathons including Top 15 Finalist at HackIndia Spark 7 among 200+ teams.", "BUILDING", "/images/journey/hackindia.webp", "/experience#achievements"],
-  ["05", "Societies", "Vice President & Co-Founder of FlareOn and Core Team Member at Disaster Risk Reduction Club.", "CLUBS & COMMUNITY", "/images/clubs/flareon-logo.jpg", "/experience#clubs"],
-  ["06", "Patent", "QuickPull — Community-Driven Route Optimization System intellectual property filing.", "INNOVATION", "/images/projects/quickpull.jpg", "/research#patent"],
-  ["07", "AI Summit", "Attended India AI Impact Summit 2026 at Bharat Mandapam, New Delhi.", "CONFERENCES", "/images/journey/ai-summit.webp", "/about#story"],
-  ["08", "Seminars", "Campus panels, technical masterclasses, IEEE & Red Hat developer communities.", "LEARNING", "/images/journey/campus-events.webp", "/about#extracurriculars"],
-  ["09", "Appreciations", "Academic recognitions, 100/100 AI masterclass distinction, and verified certifications.", "MILESTONES", "/images/journey/achievements.webp", "/about#certifications"],
+  ["01", "Projects", "Neurofied.ai, QuickPull, SkillXchange & Roam.ai built across hackathons and live deployments.", "PROJECTS", "/images/journey/Projects.webp", "/projects"],
+  ["02", "Research", "Published machine learning papers, book chapters, and ongoing Alzheimer's research.", "PUBLICATIONS", "/images/journey/research.webp", "/research"],
+  ["03", "Code Competitions", "100+ LeetCode problems solved in C++ and Java, CodeWars 6.0 & algorithmic problem solving.", "COMPETITIVE CODING", "/images/journey/DSAquestions.webp", "/dsa"],
+  ["04", "Hackathons", "7+ national hackathons including Top 15 Finalist at HackIndia Spark 7 & Adobe Round 2.", "BUILDING", "/images/journey/hackathons.webp", "/hackathons"],
+  ["05", "Clubs & Societies", "Vice President & Co-Founder of FlareOn and Core Team Member at Disaster Risk Reduction Club.", "LEADERSHIP", "/images/journey/clubs.webp", "/experience#clubs"],
+  ["06", "Patent", "QuickPull — Community-Driven Route Optimization System intellectual property filing.", "INNOVATION", "/images/journey/Patent.webp", "/research#patent"],
+  ["07", "AI Summit", "Attended India AI Impact Summit 2026 at Bharat Mandapam, New Delhi.", "CONFERENCES", "/images/journey/ai-summit.webp", "/ai-summit"],
+  ["08", "Campus Events", "FlareOn E0–E4 productions, technical seminars, IEEE & Red Hat developer communities.", "CAMPUS LIFE", "/images/journey/campus-events.webp", "/campus-events"],
+  ["09", "Achievements", "National recognitions, 100/100 AI masterclass distinction, NSO medals & certifications.", "MILESTONES", "/images/journey/achievements.webp", "/achievements"],
 ];
 
 export const homeHighlights = [
-  { n: "01", title: "Projects", metric: "4+", metricLabel: "MERN stack projects", detail: "Neurofied.ai, QuickPull, SkillXchange & Name Ideas.", href: "/projects", tag: "NOTABLE WORK" },
+  { n: "01", title: "Projects", metric: "4+", metricLabel: "MERN stack projects", detail: "Neurofied.ai, QuickPull, SkillXchange & More Ideas.", href: "/projects", tag: "NOTABLE WORK" },
   { n: "02", title: "Experience", metric: "02", metricLabel: "Campus clubs", detail: "Mandafia Services, FlareOn & DRR Club events.", href: "/experience", tag: "WORK & LEADERSHIP" },
   { n: "03", title: "Research & IP", metric: "4", metricLabel: "Published research works", detail: "Published papers, book chapters & QuickPull patent.", href: "/research", tag: "PUBLICATIONS" },
   { n: "04", title: "Certificates", metric: "4", metricLabel: "Certifications", detail: "Verified certifications, credentials & about story.", href: "/about#certifications", tag: "CERTIFICATIONS & ABOUT" },

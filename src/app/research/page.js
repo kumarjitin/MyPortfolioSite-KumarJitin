@@ -2,7 +2,9 @@ import { PageShell } from "@/components/Site/SiteChrome";
 import Reveal from "@/components/Site/Reveal";
 import ThemedImg from "@/components/Site/ThemedImg";
 import PaperTicker from "@/components/Site/PaperTicker";
+import AutoScrollGallery from "@/components/Site/AutoScrollGallery";
 import { publications, profile } from "@/data";
+import { listPublicImages } from "@/lib/files";
 
 export const metadata = { title: "Research & Publications — Kumar Jitin" };
 
@@ -12,6 +14,7 @@ export default function ResearchPage() {
     ...publications.bookChapters,
     { ...publications.patent, venue: "Patent Filing" },
   ];
+  const momentImages = listPublicImages("images/research/Moments");
 
   return (
     <PageShell>
@@ -110,6 +113,16 @@ export default function ResearchPage() {
             </a>
           </div>
         </div>
+
+        {momentImages.length > 0 && (
+          <>
+            <h2 className="sub-heading">Research Moments</h2>
+            <p className="muted" style={{ marginBottom: "16px", maxWidth: "75ch" }}>
+              A collection of moments from seminars, conferences, and collaborative research sessions.
+            </p>
+            <AutoScrollGallery images={momentImages} altPrefix="Research moment" />
+          </>
+        )}
       </section>
     </PageShell>
   );

@@ -314,3 +314,8 @@
   }
 }
 @media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) { .journey-card__copy p { max-height: none; opacity: 1; } }
+
+html[data-theme="light"] .journey-card {
+  box-shadow: 0 12px 32px rgba(17, 24, 11, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  border-color: rgba(17, 24, 11, 0.14);
+}

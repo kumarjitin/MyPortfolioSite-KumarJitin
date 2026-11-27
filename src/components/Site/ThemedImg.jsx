@@ -7,6 +7,9 @@ export default function ThemedImg({ src, alt = "", sizes = "(max-width: 600px) 9
   const themed = useThemedImage(src);
   const selected = assets[themed] ? themed : src;
   const dimensions = assets[selected];
-  if (!dimensions) return null;
+  if (!dimensions) {
+    if (!selected) return null;
+    return <img src={selected} alt={alt} loading={loading} decoding="async" {...props} />;
+  }
   return <Image src={selected} alt={alt} width={dimensions[0]} height={dimensions[1]} sizes={sizes} loading={loading} {...props} />;
 }

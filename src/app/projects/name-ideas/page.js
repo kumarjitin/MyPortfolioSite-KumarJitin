@@ -1,125 +1,85 @@
 import Link from "next/link";
 import { PageShell } from "@/components/Site/SiteChrome";
-import Reveal from "@/components/Site/Reveal";
 import ThemedImg from "@/components/Site/ThemedImg";
-import { fileExistsInPublic } from "@/lib/files";
 import { nameIdeas, projects } from "@/data";
 
-export const metadata = { title: "Name Ideas — Kumar Jitin" };
+export const metadata = { title: "More Ideas — Kumar Jitin" };
 
-export default function NameIdeasPage() {
+export default function MoreIdeasPage() {
   const project = projects.find((p) => p.slug === "name-ideas");
-  const hasProjectReport = fileExistsInPublic(project?.files?.report);
-  const hasProjectPpt = fileExistsInPublic(project?.files?.ppt);
-  const hasProjectPoster = fileExistsInPublic(project?.files?.poster);
 
   return (
     <PageShell>
       <section className="page-header">
-        <span className="eyebrow">PROJECT {project?.number || "04"} · {project?.type || "CREATIVE EXPLORATION"}</span>
+        <span className="eyebrow">PROJECT {project?.number || "04"} · {project?.type || "CONCEPTS · COMING SOON"}</span>
         <div className="page-header-row">
-          <h1>{project?.name || "Name Ideas"}<em>.</em></h1>
+          <h1>{project?.name || "More Ideas"}<em>.</em></h1>
           <p>{project?.subtitle} — {project?.summary}</p>
         </div>
       </section>
 
-      <section className="page-content">
-        <div className="card-grid-3">
-          {nameIdeas.map((idea, i) => {
-            const hasReport = fileExistsInPublic(idea.files?.report);
-            const hasPpt = fileExistsInPublic(idea.files?.ppt);
+      <section className="page-content" style={{ minHeight: "auto" }}>
+        {nameIdeas.map((idea) => (
+          <div key={idea.name} style={{ marginBottom: "24px" }}>
+            <div className="detail-split" style={{ paddingInline: 0, paddingTop: 0, paddingBottom: "16px" }}>
+              <div
+                className="detail-split__media"
+                style={idea.imageBg ? { background: idea.imageBg } : undefined}
+              >
+                <ThemedImg
+                  src={idea.image}
+                  alt={idea.name}
+                  loading="eager"
+                  style={
+                    idea.imageFit === "contain"
+                      ? { objectFit: "contain", padding: "16px" }
+                      : undefined
+                  }
+                />
+              </div>
 
-            return (
-              <Reveal delay={i * 50} key={idea.name}>
-                <article className="event-card" style={{ height: "100%" }}>
-                  <div>
-                    <div
-                      className="event-card__media"
-                      style={idea.imageBg ? { background: idea.imageBg } : undefined}
-                    >
-                      <ThemedImg
-                        src={idea.image}
-                        alt={idea.name}
-                        loading="lazy"
-                        style={
-                          idea.imageFit === "contain"
-                            ? { objectFit: "contain", padding: "14px" }
-                            : undefined
-                        }
-                      />
-                    </div>
-                    <span className="eyebrow" style={{ marginTop: "12px", display: "block", fontSize: "10px" }}>
-                      {idea.domain}
-                    </span>
-                    <h3 style={{ fontSize: "19px", margin: "6px 0 4px", letterSpacing: "-0.03em" }}>
-                      {idea.name}
-                    </h3>
-                    <p style={{ fontSize: "13px", fontWeight: 600, color: "var(--text)", margin: "0 0 8px" }}>
-                      {idea.tagline}
-                    </p>
-                    <p style={{ fontSize: "13.5px", color: "var(--muted)", lineHeight: 1.55, margin: 0 }}>
-                      {idea.note}
-                    </p>
-                  </div>
+              <article className="info-card">
+                <span className="eyebrow">{idea.domain}</span>
+                <h2 style={{ margin: "6px 0 6px", fontSize: "clamp(22px, 2.4vw, 30px)", letterSpacing: "-0.03em" }}>
+                  {idea.name} — {idea.tagline}
+                </h2>
+                {idea.overview?.map((para, idx) => (
+                  <p key={idx} style={idx > 0 ? { marginTop: "10px" } : { marginTop: "8px" }}>{para}</p>
+                ))}
+              </article>
+            </div>
 
-                  <div className="split-card__foot" style={{ marginTop: "14px", justifyContent: "flex-start" }}>
-                    {hasReport ? (
-                      <a className="button button-sm" href={idea.files.report} download>
-                        Report ↓
-                      </a>
-                    ) : (
-                      <span className="button button-sm button-disabled" aria-disabled="true">
-                        Report — Coming soon
-                      </span>
-                    )}
-                    {hasPpt ? (
-                      <a className="button button-sm" href={idea.files.ppt} download>
-                        PPT ↓
-                      </a>
-                    ) : (
-                      <span className="button button-sm button-disabled" aria-disabled="true">
-                        PPT — Coming soon
-                      </span>
-                    )}
-                  </div>
+            <div className="card-grid-2 event-cards-flush">
+              {idea.approach?.length > 0 && (
+                <article className="info-card">
+                  <span className="eyebrow">MY APPROACH AND EXPLORATION</span>
+                  <ul className="bullet-list" style={{ marginTop: "10px" }}>
+                    {idea.approach.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
                 </article>
-              </Reveal>
-            );
-          })}
-        </div>
+              )}
 
-        <div className="info-card" style={{ marginTop: "28px" }}>
-          <span className="eyebrow">PROJECT DELIVERABLES</span>
-          <h3 style={{ marginTop: "6px" }}>Collection Report, PPT &amp; Poster</h3>
-          <p>Download the overall Name Ideas documentation below when available.</p>
+              <article className="info-card">
+                <span className="eyebrow">KEY LEARNING AND DIRECTION</span>
+                <p style={{ marginTop: "10px" }}>{idea.learning}</p>
+                {idea.status && (
+                  <div className="event-takeaway-banner" style={{ marginTop: "16px" }}>
+                    <span className="eyebrow">CURRENT STATUS</span>
+                    <p style={{ fontSize: "13.5px" }}>{idea.status}</p>
+                  </div>
+                )}
+              </article>
+            </div>
+          </div>
+        ))}
+
+        <div className="info-card" style={{ marginTop: "16px" }}>
+          <span className="eyebrow">MORE CONCEPTS</span>
+          <h3>Rest Coming Soon</h3>
+          <p>Additional project ideas, technical proposals, and prototypes are in progress and will be added here soon.</p>
           <div className="action-row" style={{ marginTop: "14px" }}>
-            {hasProjectReport ? (
-              <a className="button button-outline" href={project.files.report} download>
-                Download Report ↓
-              </a>
-            ) : (
-              <span className="button button-disabled" aria-disabled="true">
-                Report — Coming soon
-              </span>
-            )}
-            {hasProjectPpt ? (
-              <a className="button button-outline" href={project.files.ppt} download>
-                Download PPT ↓
-              </a>
-            ) : (
-              <span className="button button-disabled" aria-disabled="true">
-                PPT — Coming soon
-              </span>
-            )}
-            {hasProjectPoster ? (
-              <a className="button button-outline" href={project.files.poster} download>
-                Download Poster ↓
-              </a>
-            ) : (
-              <span className="button button-disabled" aria-disabled="true">
-                Poster — Coming soon
-              </span>
-            )}
             <Link className="button button-accent" href="/projects">
               ← Back to Projects
             </Link>
